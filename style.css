@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 350px;
+    padding: 3rem 2rem;
+    background-image: linear-gradient(to top right, #5d5dff, #00ffff);
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 255, .4);
+    color: #fff;
+}
+.single:not(.single:last-child) {
+    margin: 2rem 0;
+}
+h3, h1 {
+    text-align: center;
+    text-shadow: 0 0 .3rem rgba(0, 0, 0, .4);
+}
+h1 {
+    font-size: 3rem;
+}
+h3 {
+    font-weight: 500;
+}
+
+.single {
+    position: relative;
+}
+.extra-info {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    background-image: linear-gradient(to top right, #5d5dff, #6333ff);
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: .9rem;
+    box-shadow: 0 0 .5rem #5d5dff;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20%);
+    transition: 200ms ease-in-out opacity,
+                200ms ease-in-out transform;
+}
+.question-mark {
+    cursor: pointer;
+}
+.question-mark:hover ~ .extra-info {
+    opacity: 1;
+    transform: translateY(0);
+}
